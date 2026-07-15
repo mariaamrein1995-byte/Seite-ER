@@ -1,0 +1,404 @@
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: line;
+  z-index: 3;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.95);
+  padding: 18px 16px;
+}
+
+.nav-links,
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a,
+.footer-item {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.footer-item :hover {
+  color: rgb(98, 66, 15);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(98, 66, 15);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("Images/Herz\ Sch.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 10vw, 5rem);
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 28px;
+  max-width: 32ch;
+}
+
+/* ===== BUTTONS ===== */
+.hero-button,
+.about-button {
+  display: inline-block;
+  background-color: rgb(70, 116, 99);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.hero-button:hover,
+.about-button:hover {
+  background-color: rgb(98, 66, 15);
+  transform: translateY(-2px);
+}
+
+/* ===== ABOUT ===== */
+.about {
+  background-color: #0f0f0f;
+  padding: 60px 0;
+}
+
+.about-container {
+  padding: 80px;
+}
+
+.about-content {
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.about-content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: rgb(70, 116, 99);
+  margin-top: 8px;
+}
+
+.about-content p {
+  color: #ddd;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin: 0 auto 20px auto;
+}
+
+.about-button {
+  display: inline-block;
+  background-color: rgb(70, 116, 99);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.about-button:hover {
+  background-color: rgb(98, 66, 15);
+  transform: translateY(-2px);
+}
+
+.about-container {
+  text-align: center;
+}
+
+.about-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  border-radius: 6px;
+}
+
+.info-wrapper {
+  margin: 3rem 0;
+  padding: 2rem 0;
+  background: url("./images/Herz\ Sch.jpg");
+  background-position: center;
+}
+.hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.heading {
+  text-align: center;
+}
+
+.hours-entry {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+}
+
+.days {
+  color: var(--text-color);
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px auto;
+  padding: 40px 30px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.contact .heading {
+  margin-top: 0;
+}
+
+.contact-details {
+  text-align: left;
+}
+
+.contact-details .heading {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-detail {
+  margin-top: 1.1rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.contact-actions {
+  margin-top: 25px;
+}
+
+.contact-image {
+  width: 420px;
+  max-width: 100%;
+}
+
+.button {
+  display: inline-block;
+  background-color: rgb(70, 116, 99);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(98, 66, 15);
+  transform: translateY(-2px);
+}
+
+.button-inverted {
+  display: inline-block;
+  background-color: rgb(70, 116, 99);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.button-inverted:hover {
+  background-color: rgb(98, 66, 15);
+  transform: translateY(-2px);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: black;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+  color: #ddd;
+}
+@media only screen and (min-width: 600px) {
+  .nav,
+  .footer-links {
+    gap: 2rem;
+    font-size: 1rem;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    padding: 3rem 0;
+    gap: 3rem;
+  }
+
+  .footer-links {
+    flex-direction: row;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .about {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 6rem;
+    align-items: center;
+  }
+
+  .about-image {
+    gap: 1rem;
+  }
+
+  .info-wrapper {
+    margin: 8rem 0;
+    padding: 6rem 0;
+  }
+  .hours {
+    margin-top: 2rem;
+  }
+
+  .hours-entry {
+    width: 20rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .contact-details,
+  .contact-details .heading {
+    text-align: center;
+  }
+}
